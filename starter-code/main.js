@@ -26,9 +26,12 @@ var isMatch = function(cardsInPlay) {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		alert('You found a match!');
 		score.innerHTML ++;
+		clearBoard();
 	} else {
 		alert('Nope, try again!');
+		clearBoard();
 	}
+	clearBoard();
 };
 
 // Check if two cards are in play
@@ -47,13 +50,11 @@ var isTwoCards = function() {
 	}
 };
 
-/*  How do I get the board to clear after two cards are picked?
+// This function clears the board.
 var clearBoard = function() {
-	var cards = document.getElementsByClassName('.card');
-	for (i=0; i < cards.length; i += 1) {
-		cards[i].innterHTML = '';
+	for (var i=0; i < cards.length; i += 1) {
+		document.getElementsByClassName('card')[i].innerHTML = '';
 	}
 };
-*/
 
 createBoard();

@@ -71,9 +71,10 @@ h6 {
 
 .card {
 	height: 200px;
-	width: 150px;
+	width: 143px;
 	border: 1px solid black;
-	background-color: yellow;
+	background: url('img/cardback.png');
+	background-size: cover;
 	border-radius: 10px;
 	display: inline-block;
 	float: left;
